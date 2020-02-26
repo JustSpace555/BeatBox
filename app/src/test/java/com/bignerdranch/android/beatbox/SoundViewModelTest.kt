@@ -15,10 +15,10 @@ class SoundViewModelTest {
 
 	@Before
 	fun setUp() {
-		sound = Sound("assetPath")
-		subject = SoundViewModel()
-		subject.sound = sound
 		beatBox = mock(BeatBox::class.java)
+		sound = Sound("assetPath")
+		subject = SoundViewModel(beatBox)
+		subject.sound = sound
 	}
 
 	@Test
